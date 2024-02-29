@@ -2,29 +2,26 @@
 
 namespace ScreenSound.menus;
 
-internal class MenuExibirDetalhes : Menu
-{
-   
 
+internal class MenuAvaliarAlbum : Menu
+{
     public override void Executar(Dictionary<string, Banda> bandasRegistradas)
     {
         base.Executar(bandasRegistradas);
-        ExibirTituloDaOpcao("Exibir detalhes da banda");
-        Console.Write("Digite o nome da banda que deseja conhecer melhor: ");
+
+        base.Executar(bandasRegistradas);
+        ExibirTituloDaOpcao("Avaliar Album");
+        Console.Write("Digite o nome da que deseja avaliar: ");
         string nomeDaBanda = Console.ReadLine()!;
         if (bandasRegistradas.ContainsKey(nomeDaBanda))
         {
-
             Banda banda = bandasRegistradas[nomeDaBanda];
-            Console.WriteLine($"\nA média da banda {nomeDaBanda} é {banda.Media}.");
-
-            /**
-            * ESPAÇO RESERVADO PARA COMPLETAR A FUNÇÃO
-            */
-            Console.WriteLine("Digite uma tecla para votar ao menu principal");
-            Console.ReadKey();
+            Console.Write($"Qual a nota que a banda {nomeDaBanda} merece: ");
+            Avaliacao nota = Avaliacao.Parse(Console.ReadLine()!);
+            banda.AdicionarNota(nota);
+            Console.WriteLine($"\nA nota {nota.Nota} foi registrada com sucesso para a banda {nomeDaBanda}");
+            Thread.Sleep(2000);
             Console.Clear();
-           
 
         }
         else
@@ -33,7 +30,7 @@ internal class MenuExibirDetalhes : Menu
             Console.WriteLine("Digite uma tecla para voltar ao menu principal");
             Console.ReadKey();
             Console.Clear();
-            
+
         }
     }
 }
