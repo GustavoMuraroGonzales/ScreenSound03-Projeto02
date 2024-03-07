@@ -1,7 +1,6 @@
 ﻿using ScreenSound.Modelos;
 
-namespace ScreenSound.menus;
-
+namespace ScreenSound.Menus;
 
 internal class MenuRegistrarAlbum : Menu
 {
@@ -27,8 +26,6 @@ internal class MenuRegistrarAlbum : Menu
             Console.WriteLine("Digite uma tecla para voltar ao menu principal");
             Console.ReadKey();
             Console.Clear();
-
         }
-       
     }
 }

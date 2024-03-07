@@ -1,7 +1,6 @@
 ﻿using ScreenSound.Modelos;
 
-namespace ScreenSound.menus;
-
+namespace ScreenSound.Menus;
 
 internal class MenuRegistrarBanda : Menu
 {
