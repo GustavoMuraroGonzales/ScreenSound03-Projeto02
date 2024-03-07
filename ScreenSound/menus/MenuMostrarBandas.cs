@@ -1,9 +1,8 @@
-﻿using ScreenSound.Menus;
-using ScreenSound.Modelos;
+﻿using ScreenSound.Modelos;
 
-namespace ScreenSound.menus;
+namespace ScreenSound.Menus;
 
-internal class MenuMostrarBandasRegistradas : Menu
+internal class MenuMostrarBandas : Menu
 {
     public override void Executar(Dictionary<string, Banda> bandasRegistradas)
     {
@@ -18,8 +17,5 @@ internal class MenuMostrarBandasRegistradas : Menu
         Console.WriteLine("\nDigite uma tecla para voltar ao menu principal");
         Console.ReadKey();
         Console.Clear();
-        
-
-
     }
 }

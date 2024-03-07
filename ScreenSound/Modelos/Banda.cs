@@ -1,4 +1,4 @@
-﻿namespace ScreenSound.Modelos;
+﻿namespace ScreenSound.Modelos; 
 
 internal class Banda : IAvaliavel
 {
@@ -18,7 +18,6 @@ internal class Banda : IAvaliavel
             if (notas.Count == 0) return 0;
             else return notas.Average(a => a.Nota);
         }
-
     }
     public List<Album> Albuns => albuns;
 
